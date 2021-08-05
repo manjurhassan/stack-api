@@ -2,61 +2,64 @@ package com.manjur.stack.model;
 
 public class Stack {
 
-    private Node top;
+    private int[] arr;
     private int size;
+    private int top;
 
     public Stack() {
-        this.top = null;
-        this.size = 0;
+        this.size = 100;
+        this.arr = new int[100];
+        this.top = -1;
     }
 
-    public int push(int value) {
+    public boolean push(int value) {
 
-        Node temporary = new Node();
-
-        if (temporary == null) {
+        if (top >= size - 1) {
             System.out.println("\nOut of memory");
-            return -1;
+            return false;
         }
+        top = top + 1;
+        arr[top] = value;
 
-        temporary.data = value;
-        temporary.next = top;
-        top = temporary;
-
-        size++;
-
-        return value;
+        return true;
     }
 
     public int pop() {
-        if (top == null) {
+        if (top < 0) {
             System.out.println("\nStack is empty");
             return -1;
         }
-        int value = top.data;
-        top = top.next;
-        size--;
+        int value = arr[top];
+        top = top - 1;
+
         return value;
     }
 
     public int peek() {
         if (!isEmpty()) {
-            return top.data;
+            return arr[top];
         }
         System.out.println("\nStack is empty");
         return -1;
     }
 
     public boolean isEmpty() {
-        return top == null;
+        return top < 0;
     }
 
     public int size() {
-        return this.size;
+        return this.top + 1;
     }
-}
 
-class Node {
-    int data;
-    Node next;
+    public boolean resize(int value) {
+        if (value <= size) {
+            System.out.println("\nInvalid size");
+            return false;
+        }
+        int[] temp = new int[value];
+        for (int i=0; i<=top; i++)
+            temp[i] = arr[i];
+        arr = temp;
+        return true;
+    }
 }

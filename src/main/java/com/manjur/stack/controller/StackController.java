@@ -35,7 +35,7 @@ public class StackController {
         if (success) {
             return new ResponseEntity<>(result, HttpStatus.OK);
         }
-        return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
+        return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
 
     @GetMapping(path = "/stack/peek", produces = MediaType.APPLICATION_JSON_VALUE)
@@ -63,5 +63,15 @@ public class StackController {
         int size = stackService.size();
         Result result = new Result(size, true);
         return new ResponseEntity<>(result, HttpStatus.OK);
+    }
+
+    @PostMapping(path = "/stack/resize/{value}", produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<Result> resize(@PathVariable int value) {
+        boolean success = stackService.resizeStack(value);
+        Result result = new Result(value, success);
+        if (success) {
+            return new ResponseEntity<>(result, HttpStatus.OK);
+        }
+        return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
     }
 }

@@ -13,8 +13,7 @@ public class StackService {
     }
 
     public boolean pushValue(int data) {
-        int value = this.stack.push(data);
-        return value != -1;
+        return this.stack.push(data);
     }
 
     public int popValue() {
@@ -31,5 +30,9 @@ public class StackService {
 
     public int size() {
         return this.stack.size();
+    }
+
+    public boolean resizeStack(int value) {
+        return this.stack.resize(value);
     }
 }
