@@ -10,13 +10,13 @@ public class Stack {
         this.size = 0;
     }
 
-    public void push(int value) {
+    public int push(int value) {
 
         Node temporary = new Node();
 
         if (temporary == null) {
             System.out.println("\nOut of memory");
-            return;
+            return -1;
         }
 
         temporary.data = value;
@@ -24,6 +24,8 @@ public class Stack {
         top = temporary;
 
         size++;
+
+        return value;
     }
 
     public int pop() {
