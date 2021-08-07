@@ -60,6 +60,7 @@ public class Stack {
         for (int i=0; i<=top; i++)
             temp[i] = arr[i];
         arr = temp;
+        this.size = value;
         return true;
     }
 }
