@@ -16,6 +16,9 @@ isEmpty - check whether the stack is emty
 
 resize - resize the stack to  a new size while maintaining the stack order
 
+Note - Stack starts with an initial capacity of **100** elements
+
+
 ## **How to use**
 Clone the repository locally,
 make sure that Java 8 (minimum) and Maven are
