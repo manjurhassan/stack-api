@@ -35,7 +35,9 @@ Run spring boot application by using this command
 
 Now you can run the different stack endpoints - 
 
-**Push** - localhost:8080/stack/push/{value}
+**Push** - 
+
+localhost:8080/stack/push/{value}
 
 where {value} is the value to be pushed to the stack
 
@@ -52,13 +54,18 @@ returns -
 if the stack is full then
 
 returns -
+
 {
 "value": 50,
 **"success": false,**
 "empty": false
 }
 
-**Pop** - http://localhost:8080/stack/pop
+
+
+**Pop** -
+
+http://localhost:8080/stack/pop
 
 on successful pop, returns -
 
@@ -72,7 +79,9 @@ if the stack is empty then returns -
 
 Http 204 NO_CONTENT return value
 
-**Peek** - http://localhost:8080/stack/peek
+**Peek** - 
+
+http://localhost:8080/stack/peek
 
 on successful peek, returns -
 
@@ -86,7 +95,9 @@ if the stack is empty then returns -
 
 Http 204 NO_CONTENT return value
 
-**isEmpty** - http://localhost:8080/stack/isEmpty
+**isEmpty** - 
+
+http://localhost:8080/stack/isEmpty
 
 if the stack is not empty, returns - 
 
@@ -104,7 +115,9 @@ if the stack is empty then returns -
 **"empty": true**
 }
 
-**size** - http://localhost:8080/stack/size
+**size** - 
+
+http://localhost:8080/stack/size
 
 If the stack has 2 elements it returns size 2
 
@@ -114,7 +127,9 @@ If the stack has 2 elements it returns size 2
 "empty": false
 }
 
-**resize** - http://localhost:8080/stack/resize/{value}
+**resize** - 
+
+http://localhost:8080/stack/resize/{value}
 
 where {value} is the new capacity of the stack
 
