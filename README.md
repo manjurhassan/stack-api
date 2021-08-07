@@ -1,6 +1,6 @@
 # stack-api
 
-This is a set of APIs Exposing functionalities of a Stack data structure using REST endpoints.
+###### This is a set of APIs Exposing functionalities of a Stack data structure using REST endpoints.
 
 Following are the allowed functionalities:
 
