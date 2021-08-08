@@ -12,7 +12,7 @@ peek - return the top element of the stack without removing it
 
 size - return the current size, i.e. the number of elements in the stack
 
-isEmpty - check whether the stack is emty
+isEmpty - check whether the stack is empty
 
 resize - resize the stack to  a new size while maintaining the stack order
 
@@ -27,9 +27,9 @@ installed locally.
 Go to the application root directory -
 path/to/stack-api
 
-Do **mvn clean install**
+Run **mvn clean install**
 
-Run spring boot application by using this command 
+Run spring boot application by using below command 
 
 **mvnw spring-boot:run**
 
