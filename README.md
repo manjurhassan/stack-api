@@ -4,17 +4,17 @@
 
 Following are the allowed functionalities:
 
-push - push an item to the top of the stack
+push - push an item at the top of the stack.
 
-pop - remove and return the top element of the stack
+pop - remove and return the top element of the stack.
 
-peek - return the top element of the stack without removing it
+peek - return the top element of the stack without removing it.
 
-size - return the current size, i.e. the number of elements in the stack
+size - return the current size, i.e. the number of elements in the stack.
 
-isEmpty - check whether the stack is empty
+isEmpty - check whether the stack is empty.
 
-resize - resize the stack to  a new size while maintaining the stack order
+resize - resize the stack to  a new size while maintaining the stack order.
 
 Note - Stack starts with an initial capacity of **100** elements
 
